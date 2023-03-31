@@ -14,7 +14,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 
-embedding_df=pd.read_csv('./embeddings.csv', index_col=0)
+embedding_df=pd.read_csv('./src/embeddings.csv', index_col=0)
 embedding_df['embeddings'] = embedding_df['embeddings'].apply(eval).apply(np.array)
 
 # df.head()
